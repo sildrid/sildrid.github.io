@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-margin-top: 5rem;
+}
+body {
+  background-color: black;
+  color: white;
+  text-shadow: 1px 1px grey;
+  font-family: "verdana";
+}
+/* header */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+header img {
+  width: 5rem;
+}
+nav {
+  z-index: 1000;
+  user-select: none;
+  background-color: purple;
+  position: sticky;
+  top: 0;
+}
+nav li {
+  list-style: none;
+  width: 50%;
+}
+nav a {
+  transition: 0.2s;
+  text-decoration: none;
+  color: white;
+  display: block;
+  text-align: center;
+  padding: 0.5rem;
+}
+nav a:hover {
+  background-color: blueviolet;
+  transform: scale(1.1);
+}
+nav a:active {
+  background-color: darkorchid;
+  transform: scale(1.05);
+}
+/* content */
+main {
+  max-width: 700px;
+  margin: 1vh auto;
+}
+article {
+  margin-bottom: 2.5rem;
+}
+h3 {
+  text-align: center;
+}
+h3::before {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: white;
+}
+h3::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: white;
+}
+section {
+  padding: 0.5rem 2vw;
+}
+.silver {
+  display: block;
+  border-radius: 50%;
+  width: 8rem;
+  margin: 0 auto;
+  border: 2px solid white;
+}
+h4 {
+  text-decoration: underline;
+  margin-bottom: 0.5rem;
+}
+article ul {
+  list-style: none;
+}
+article ul li {
+  width: 50%;
+  text-align: center;
+}
+article ul li a {
+  transition: 0.2s;
+  position: relative;
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  display: flex;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  box-shadow: 2px 2px 2px fuchsia;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+article ul li a:hover {
+  top: 1px;
+  left: 1px;
+  box-shadow: 1px 1px 2px fuchsia;
+}
+article ul li a:active {
+  background-color: silver;
+}
+article ul img {
+  width: 2.5rem;
+}
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+/* Achivements */
+#achivements .flexbox {
+  flex-wrap: nowrap;
+  gap: 2px;
+}
+#achivements input {
+  display: none;
+}
+#achivements label {
+  filter: blur(2px);
+  width: 5%;
+  flex-grow: 1;
+  transition: 1s;
+}
+#achivements img {
+  height: 100%;
+  width: 100%;
+}
+#achivements input:checked + label {
+  filter: none;
+  width: 80%;
+  flex-grow: 0;
+}
+/*----------------------*/
+#donate-img {
+  height: 2.5rem;
+}
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+footer {
+  text-align: center;
+  background-color: purple;
+}
+@media screen and (orientation: landscape) {
+  nav li {
+    width: 25%;
+  }
+}
