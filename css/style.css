@@ -78,7 +78,7 @@ section {
   display: block;
   border-radius: 50%;
   width: 8rem;
-  margin: 0 auto;
+  margin: 1rem auto;
   border: 2px solid white;
 }
 h4 {
@@ -125,6 +125,8 @@ article ul img {
 /* Achivements */
 #achivements .flexbox {
   flex-wrap: nowrap;
+  max-height: 320px;
+  height: 45vw;
   gap: 2px;
 }
 #achivements input {
@@ -142,8 +144,14 @@ article ul img {
 }
 #achivements input:checked + label {
   filter: none;
-  width: 80%;
+  max-width: 420px;
+  width: 60vw;
   flex-grow: 0;
+}
+/* Contact */
+section a {
+  color: fuchsia;
+  text-shadow: 1px 1px darkorchid;
 }
 /*----------------------*/
 #donate-img {
