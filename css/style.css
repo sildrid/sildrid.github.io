@@ -75,9 +75,14 @@ section {
   padding: 0.5rem 2vw;
 }
 .silver {
+  background-image: url("../res/silver.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
   display: block;
   border-radius: 50%;
   width: 8rem;
+  height: 8rem;
   margin: 1rem auto;
   border: 2px solid white;
 }
@@ -125,28 +130,29 @@ article ul img {
 /* Achivements */
 #achivements .flexbox {
   flex-wrap: nowrap;
-  max-height: 320px;
-  height: 45vw;
-  gap: 2px;
+  height: 10rem;
+  gap: 0.5rem;
+  align-items: center;
 }
 #achivements input {
   display: none;
 }
-#achivements label {
-  filter: blur(2px);
-  width: 5%;
-  flex-grow: 1;
-  transition: 1s;
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#achivementImg img {
+  animation: fade-in 1s;
 }
 #achivements img {
-  height: 100%;
   width: 100%;
 }
 #achivements input:checked + label {
-  filter: none;
-  max-width: 420px;
-  width: 60vw;
-  flex-grow: 0;
+  border: 0.25rem solid fuchsia;
 }
 /* Contact */
 section a {
